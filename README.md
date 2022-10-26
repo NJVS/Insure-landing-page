@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Demo](https://njvs.github.io/blogr-landing-page/)
+- [Live Demo](https://njvs.github.io/Insure-landing-page/)
 
 ## My process
 
