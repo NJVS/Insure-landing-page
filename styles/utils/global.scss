@@ -1,0 +1,25 @@
+:root {
+	// FONTS
+	--ff-primary: 'DM Serif Display', serif; 	// 400
+	--ff-secondary: 'Karla', sans-serif; 		// 400 700
+	--fs-100: 0.785rem; // 11
+	--fs-200: 0.875rem; // 14
+	--fs-300: 1rem; 	// 16
+	--fs-400: 1.125rem; // 18
+	--fs-500: 1.25rem; 	// 20
+	--fs-600: 1.5rem; 	// 24
+	--fs-700: 1.75rem; 	// 28
+	--fs-800: clamp(2.75rem, 6vw, 3.25rem);
+	--fs-900: clamp(3rem, 6vw, 4.25rem);
+
+	// Primary
+	--c-violet-700: hsl(256, 26%, 20%);
+	--c-blue-300: hsla(216, 30%, 68%, 0.075);
+
+	// Neutral
+	--c-neutral-100: hsl(0, 0%, 100%);
+	--c-neutral-150: hsl(0, 0%, 95%);
+	--c-neutral-200: hsl(0, 0%, 75%);
+	--c-neutral-500: hsl(273, 4%, 51%);
+	--c-neutral-800: hsl(270, 9%, 17%);
+}

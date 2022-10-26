@@ -1,0 +1,99 @@
+@use '../utils/mixins.scss' as *;
+
+footer.main-footer {
+    width: 100%;
+    height: auto;
+    padding: 4rem 0 2rem;
+    background: url(../assets/images/bg-pattern-footer-desktop.svg), var(--c-blue-300);
+    background-repeat: no-repeat;
+    background-position: 0 0, auto;
+
+    @include breakpoint(mobile, md) {
+        background: url(../assets/images/bg-pattern-footer-mobile.svg), var(--c-blue-300);
+        background-repeat: no-repeat;
+    }
+
+    header.footer_heading {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 2.5rem;
+        padding-bottom: 1.5rem;
+        border-bottom: 1px solid var(--c-neutral-200);
+
+        @include breakpoint(mobile, sm) {
+            flex-direction: column;
+            gap: 2rem
+        }
+
+        ul.social-media {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+
+            li a {
+                svg path {
+                    transition: all 0.3s ease;
+                }
+                @include hover {
+                    svg path {
+                        fill: var(--c-neutral-800);
+                    }
+                }
+            }
+        }
+    }
+
+    nav.footer_nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-bottom: 2rem;
+        font-family: var(--ff-secondary);
+        font-weight: 700;
+        text-transform: uppercase;
+        
+        @include breakpoint(mobile, md) {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem 0;
+            text-align: center;
+        }
+        @include breakpoint(mobile, sm) {
+            grid-template-columns: 1fr;
+        }
+
+        ul.nav_list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+
+            li.list_title {
+                color: var(--c-neutral-500);
+                margin-bottom: 1rem;
+            }
+            li.list_item a {
+                color: var(--c-neutral-800);
+                text-decoration: none;
+
+                @include hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    p.footer_attribution {
+        display: block;
+        text-align: center;
+        font-family: var(--ff-secondary);
+
+        a {
+            color: var(--c-violet-700);
+            font-weight: 700;
+            text-decoration: none;
+
+            @include hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

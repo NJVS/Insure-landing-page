@@ -1,0 +1,123 @@
+@use '../utils/mixins.scss' as *;
+
+main.main-container {
+    width: 100%;
+    height: auto;
+    padding: 20rem 0 10rem;
+
+    @include breakpoint(mobile, lg) {
+        padding: 10rem 0;
+    }
+
+    h2.main_heading {
+        position: relative;
+        margin-bottom: 5rem;
+        color: var(--c-neutral-800);
+        font-family: var(--ff-primary);
+        font-size: var(--fs-900);
+        font-weight: 400;
+
+        @include breakpoint(mobile, lg) {
+            text-align: center;
+        }
+
+        // overline
+        &::before {
+            content: '';
+            position: absolute;
+            top: -3rem;
+            width: 8.5rem;
+            height: 1px;
+            background-color: var(--c-neutral-500);
+
+            @include breakpoint(mobile, lg) {
+                left: 50%;
+                translate: -50%;
+            }
+        }
+    }
+
+    section.main_articles {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+        gap: 2.5rem;
+        margin-bottom: 8rem;
+
+        article {
+            max-width: 349px;
+            img {
+                margin-bottom: 2rem;
+            }
+            h4 {
+                margin-bottom: 1rem;
+                color: var(--c-neutral-800);
+                font-family: var(--ff-primary);
+                font-size: var(--fs-700);
+                font-weight: 400;
+            }
+            p {
+                color: var(--c-neutral-500);
+                font-family: var(--ff-secondary);
+            }
+        }
+
+        @include breakpoint(mobile, lg) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            article {
+                text-align: center;
+                max-width: 300px;
+                img {
+                    margin: auto;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    section.main_banner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 5rem;
+        width: 100%;
+        height: auto;
+        background: url(../assets/images/bg-pattern-how-we-work-desktop.svg), var(--c-violet-700);
+        background-repeat: no-repeat;
+        background-size: auto 100%, auto;
+        background-position-x: 100%;
+
+        @include breakpoint(mobile, md) {
+            background: url(../assets/images/bg-pattern-how-we-work-mobile.svg), var(--c-violet-700);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position-x: 100%;
+        }
+
+
+        h3 {
+            color: var(--c-neutral-150);
+            font-family: var(--ff-primary);
+            font-size: var(--fs-800);
+            font-weight: 400;
+            line-height: 0.9;
+        }
+
+        @include breakpoint(mobile, lg) {
+            padding: 5rem 3rem;
+        }
+        
+        @include breakpoint(mobile, md) {
+            flex-direction: column;
+            padding: 5rem 2rem;
+
+            h3 {
+                margin-bottom: 2rem;
+                text-align: center;
+            }
+        }
+    }
+}
